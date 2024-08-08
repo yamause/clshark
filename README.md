@@ -27,7 +27,7 @@ chmod 755 clshark.sh
 sudo visudo
 
 # Add 
-<username> ALL=NOPASSWD: /usr/sbin/ip netns, /usr/bin/tcpdump
+<username> ALL=NOPASSWD: /usr/sbin/ip netns exec*
 ```
 
 もしデフォルトのインストールパス以外に Wireshark をインストールしている場合は、環境変数 `WIRESAHRK_PATH` にインストールパスを設定してください。  
