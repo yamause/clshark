@@ -30,7 +30,7 @@ sudo visudo
 <username> ALL=NOPASSWD: /usr/sbin/ip netns exec*
 ```
 
-もしデフォルトのインストールパス以外に Wireshark をインストールしている場合は、環境変数 `WIRESAHRK_PATH` にインストールパスを設定してください。  
+もしデフォルトのインストールパス以外に Wireshark をインストールしている場合は、環境変数 `WIRESHARK_PATH` にインストールパスを設定してください。  
 この変数が設定されている場合、デフォルトのインストールパスよりも優先して利用されます。
 
 ## Lisense
