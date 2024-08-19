@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-set -eo pipefail
+set -euo pipefail
 
 containerlab_host_address=$1
 lab_node_name=$2
 if_name=$3
 
-if [[ -f "${WIRESHARK_PATH}" ]]; then
+if [[ -v "WIRESHARK_PATH" ]] && [[ -f "${WIRESHARK_PATH}" ]]; then
   wireshark_path="${WIRESHARK_PATH}"
 # Use WSL.
-elif [[ -f "/mnt/c/Program\ Files/Wireshark/Wireshark.exe" ]]; then
+elif [[ -f /mnt/c/Program\ Files/Wireshark/Wireshark.exe ]]; then
   wireshark_path="/mnt/c/Program\ Files/Wireshark/Wireshark.exe"
 # Use POSIX.
 elif [[ -f "/usr/local/bin/wireshark" ]]; then
