@@ -19,6 +19,7 @@ else
   exit 1
 fi
 
+# shellcheck disable=SC2029
 ssh "${containerlab_host_address}" \
   "sudo ip netns exec ${lab_node_name} tcpdump -U -nni ${if_name} -w -" \
     | eval "${wireshark_path}" -k -i -
